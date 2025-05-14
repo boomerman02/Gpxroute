@@ -22,7 +22,8 @@ if gpx_file is not None:
     # Mostrar en mapa
     if coords:
         center = coords[len(coords)//2]
-        mapa = folium.Map(location=center, zoom_start=13)
+        #mapa = folium.Map(location=center, zoom_start=13)
+        mapa = folium.Map(location=center, zoom_start=13, tiles=tipo_mapa)
         folium.PolyLine(coords, color="red", weight=4).add_to(mapa)
         folium.Marker(coords[0], tooltip="Inicio").add_to(mapa)
         folium.Marker(coords[-1], tooltip="Fin").add_to(mapa)
