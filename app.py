@@ -5,6 +5,11 @@ import folium
 from streamlit_folium import st_folium
 
 st.title("Visualizador de rutas GPX")
+# Selector de tipo de mapa
+tipo_mapa = st.selectbox("Selecciona el tipo de mapa", [
+    "OpenStreetMap", "Stamen Terrain", "Stamen Toner", "CartoDB Positron", "CartoDB Dark_Matter"
+])
+
 
 # Subir archivo GPX
 gpx_file = st.file_uploader("Sube tu archivo GPX", type=["gpx"])
